@@ -26,6 +26,8 @@ let weather = {
     document.querySelector(".wind").innerText =
       "Wind Speed: " + speed + " km/hr";
     document.querySelector(".weather").classList.remove("loading");
+    document.body.style.backgroundImage =
+    "url('https://source.unsplash.com/1600x900/?" + name + "')";
   },
   search: function () {
     this.fetchWeather(document.querySelector(".search-bar").value);
@@ -34,8 +36,6 @@ let weather = {
 
 document.querySelector(".search button").addEventListener("click", function () {
   weather.search();
-  document.body.style.backgroundImage =
-    "url('https://source.unsplash.com/1600x900/?" + name + "')";
 });
 
 document
